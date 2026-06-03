@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const pill = 'flex items-center gap-2.5 bg-white rounded-full py-1 pl-2 pr-1 shadow-[0_2px_12px_rgba(0,0,0,0.4)] border border-black/5'
+const pill = 'flex items-center gap-2.5 bg-white rounded-full py-0.5 pl-2 pr-1 shadow-[0_2px_12px_rgba(0,0,0,0.4)] border border-black/5'
 
 const ArrowCircle = () => (
   <span className="w-7 h-7 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm shrink-0">→</span>
@@ -10,12 +10,10 @@ export default function TopBar() {
   const [mode, setMode] = useState('AUTO')
 
   return (
-    <header
-      className="absolute top-5 left-[72px] right-6 z-10 grid items-start gap-3 pointer-events-none"
-      style={{ gridTemplateColumns: '1fr auto 1fr' }}
-    >
-      {/* Left */}
-      <div className="flex flex-col items-start gap-2 pointer-events-auto">
+
+    <header className="absolute top-5 left-[72px] right-6 z-10 flex items-start justify-center pointer-events-none">
+
+      <div className="hidden lg:flex absolute left-0 flex-col items-start gap-2 pointer-events-auto">
 
         <div className={pill}>
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0" />
@@ -33,8 +31,7 @@ export default function TopBar() {
 
       </div>
 
-      {/* Center */}
-      <div className="pointer-events-auto">
+      <div className="hidden md:block pointer-events-auto">
         <div className="flex items-center gap-3 bg-gray-950 rounded-full py-1 px-5 border border-white/10 shadow-[0_2px_12px_rgba(0,0,0,0.5)] whitespace-nowrap">
 
           <span className="flex items-center gap-1.5 text-[12px] text-white font-medium">
@@ -65,8 +62,7 @@ export default function TopBar() {
         </div>
       </div>
 
-      {/* Right */}
-      <div className="flex flex-col items-end gap-2 pointer-events-auto">
+      <div className="hidden lg:flex absolute right-0 flex-col items-end gap-2 pointer-events-auto">
 
         <div className={pill}>
           <span className="text-[11px] font-bold text-gray-400 tracking-[0.12em] uppercase whitespace-nowrap">Mode</span>
