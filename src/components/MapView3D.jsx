@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { PCDLoader } from 'three/examples/jsm/loaders/PCDLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-export default function MapView3D() {
+export default function MapView3D({ controlsRef }) {
   const mountRef = useRef(null)
 
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function MapView3D() {
     controls.maxDistance       = 800
     controls.minPolarAngle     = 0
     controls.maxPolarAngle     = Math.PI
+    if (controlsRef) controlsRef.current = controls
 
     const grid = new THREE.GridHelper(400, 40, 0x1e2030, 0x1a1c26)
     scene.add(grid)
@@ -128,7 +129,7 @@ export default function MapView3D() {
         mount.removeChild(renderer.domElement)
       }
     }
-  }, [])
+  }, [controlsRef])
 
   return <div ref={mountRef} style={{ width: '100%', height: '100%' }} />
 }
