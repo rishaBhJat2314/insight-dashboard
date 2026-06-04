@@ -1,6 +1,6 @@
 # Insight.IO Dashboard — ERIC Robotics
 
-**Full Name:** Rishabh  
+**Full Name:** Rishabh Jat
 **Contact Number:** 6264276708  
 **Email ID:** jat.rishabh02@gmail.com
 
