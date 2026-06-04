@@ -6,6 +6,25 @@
 
 ---
 
+## Screenshots
+
+### Desktop — Map View
+![Dashboard Map View](screenshort/Dashboard_1.png)
+
+### Desktop — Camera View
+![Dashboard Camera View](screenshort/Dashboard_2.png)
+
+### Desktop — Zoomed Out
+![Dashboard Zoom Out](screenshort/Dashboard_1_ZoomOut.png)
+
+### Tablet
+![Tablet View](screenshort/Tab_Screen.png)
+
+### Mobile
+![Mobile View](screenshort/Mobile_Screen.png)
+
+---
+
 ## Overview
 
 A single-page robot telemetry dashboard that faithfully recreates the Insight.IO interface shown in the demo. It features a **dual-view system** (live camera feed + interactive 3D point cloud map) that swaps on click, a system-status top bar, directional controls with WASD keyboard bindings, and an emergency stop button.
